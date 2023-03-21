@@ -1,0 +1,561 @@
+/*  CScustomer.vue 에서 공동으로 사용할 style sheet  */
+
+/* 전체적 비율 설정 */
+a, address, blockquote, body, dd, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, img, input, label, li, ol, p, pre, select, span, strong, textarea, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ol, ul {
+    list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* container의 고객센터 배너 */
+#Container {
+    overflow: hidden;
+}
+
+#Contents {
+    width: 1020px;
+    height: 100%;
+    margin: 0 auto;
+}
+.sub_title_area.customer {
+    height: 100px;
+    background: url(https://#/assets/image/top/bg_customer_top.png) 50% 0 no-repeat #faeee1;
+}
+.sub_title_area.customer:before {
+    height: 100px;
+    background: #faeee1;
+}
+.sub_title_area.customer h1 {
+    float: left;
+    padding: 28px 0 0;
+}
+.sub_title_area h1>span {
+    color: #333;
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+.sub_title_area.customer:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* faq , 1:1 , 공지사항 카테고리 - faq*/
+.comm1sTabs.customer {
+    overflow: hidden;
+    height: 55px;
+    margin: 30px 0 0;
+    padding-bottom: 5px;
+}
+.comm1sTabs.threeSet li:first-child {
+    width: 33%;
+}
+.comm1sTabs.customer>li.on:before {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 50%;
+    width: 12px;
+    height: 5px;
+    margin-left: -6px;
+    /*background: url(https://#/pc-static-root/image/comm/bg_tab_arrow.png) no-repeat;*/
+}
+.comm1sTabs.customer>li.on>a {
+    background: #0460a2!important;
+    color: #fff;
+    border: 0;
+}
+/* faq , 1:1 , 공지사항 카테고리 - 1:1 */
+.comm1sTabs.customer>li+li {
+    width: 341px;
+    margin-left: -1px;
+}
+.comm1sTabs.customer>li>a {
+    display: block;
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    background: #f6f6f6;
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+    border-left: 1px solid #e6e6e6;
+}
+/* faq , 1:1 , 공지사항 카테고리 - 공지사항 */
+.comm1sTabs.customer>li+li {
+    width: 341px;
+    margin-left: -1px;
+}
+.comm1sTabs.customer>li>a {
+    display: block;
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    background: #f6f6f6;
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+    border-left: 1px solid #e6e6e6;
+}
+
+/* form 부분 : 질문검색 영역 */
+.search-faq {
+    overflow: hidden;
+    width: 100%;
+    height: 110px;
+    margin: 35px 0 0;
+    padding: 30px 0 0;
+    background: #f6f6f6;
+    text-align: center;
+}
+/* FAQ에서의 검색 */
+legend {
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    z-index: -1;
+}
+.search-faq .input {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 420px;
+    height: 48px;
+    border-radius: 30px;
+    border: 1px solid #979797;
+    background: #fff;
+    vertical-align: middle;
+}
+.search-faq .input input[type=text] {
+    float: left;
+    width: 75%;
+    height: 100%;
+    padding: 8px 10px 8px 18px;
+    border: 0;
+    font-size: 14px;
+    line-height: 22px;
+}
+.search-faq .btn_sch_del {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+   /* background: url(https://#/pc-static-root/image/comm/ico_inp_del.png) center/20px auto no-repeat;*/
+    text-indent: -999em;
+    display: none;
+}
+.search-faq .input input[type=submit] {
+    background: url(https://#/assets/image/top/search-28x28.png) 0 0/28px auto no-repeat;
+}
+/* hidden 처리 : 뭔지 확인해야함 */
+input:disabled, input:read-only, select:disabled {
+    background-color: #f8f8f8;
+    color: #888;
+}
+
+/* 인기키워드 */
+.tag_list_wrap {
+    position: relative;
+    margin-top: -30px;
+    background: #f6f6f6;
+    overflow: hidden;
+}
+/* 사이 간격 조정 */
+.m2105 .tag_list_wrap:before {
+    left: 104px;
+}
+.m2105 .tag_list_wrap .tag_list_tit {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -.86px;
+    text-align: center;
+    color: #333;
+    padding: 0 10px 0 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 68px;
+    width: 120px;
+    background: #f6f6f6;
+    z-index: 1;
+}
+/* 인기 키워드 리스트 전체 */
+.m2105 .tag_list_wrap .tag_list_tit+.tag_list {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 0 15px;
+    width: calc(100% - 118px);
+    left: 86px;
+}
+
+/* 인키키워드 하나당 태그 a 설정값 */
+.tag_list a {
+    display: inline-block;
+    margin: 5px 2px;
+    padding: 0 15px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    font-size: 13px;
+    color: #3d3d3d;
+    font-weight: 400;
+}
+
+.tag_list a:first-child {
+    margin-left: 45px;
+}
+.tag_list a:before {
+    content: "#";
+}
+/* 뭔지 알아봐야함 */
+.tag_list_wrap:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 35px;
+    height: 61px;
+    background-image: linear-gradient(to right,rgba(246,246,246,.41) 0,rgba(246,246,246,0) 0,#f6f6f6 53%);
+    z-index: 1;
+}
+
+/* 온라인몰, 오늘드림, 매장 ~ 하단 고객센터전화번호까지 영역 */ 
+
+/*  온라인몰, 오늘드림, 매장 카페고리영역
+이부분은 삭제하거나 FAQ 관련으로 변경 예정 */
+.m2105 #TabsOpenArea .commsTabDiv {
+    display: flex;
+    height: 38px;
+    margin: 56px 0 35px;
+}
+.m2105 #TabsOpenArea .commsTabDiv>.comm2sTabs {
+    display: flex;
+    width: 800px;
+    height: 38px;
+    margin: 0;
+}
+/* 온라인몰,오늘드림,매장 클릭후 관련*/
+.m2105 #TabsOpenArea .commsTabDiv>.comm2sTabs>li {
+    width: 33.33333%;
+    height: 38px;
+    float: none;
+}
+/*.comm2sTabs>li:first-child {
+    margin: 0;
+}*/
+.m2105 #TabsOpenArea .commsTabDiv>.comm2sTabs>li>button {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #888;
+    box-sizing: content-box;
+}
+.area-customer .twoTabs {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: -42px;
+}
+/* 전체 */
+.m2105 #TabsOpenArea .commsTabDiv>.comm2sTabs>li .twoTabs li {
+    padding: 0;
+    background: 0 0;
+}
+.m2105 #TabsOpenArea .commsTabDiv>.comm2sTabs>li .twoTabs li.on button {
+    color: #333;
+    font-weight: 700;
+}
+/*회원/멤버십 ~ 사이트이용/오류개선*/
+/*주문/결제 ~ 이벤트 */
+/*결제/교환/환불 ~ 서비스 제안/개선 */
+.m2105 #TabsOpenArea .commsTabDiv>.comm2sTabs>li .twoTabs li+li {
+    padding-left: 24px;
+}
+.m2105 #TabsOpenArea .commsTabDiv>.comm2sTabs>li .twoTabs li button {
+    color: #999;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -.8px;
+    line-height: 20px;
+}
+
+/* 우측 자주 묻는 질문 10 개 */
+.m2105 #TabsOpenArea .commsTabDiv .topTen {
+    width: calc(100% - 800px);
+    line-height: 38px;
+    text-align: center;
+}
+/* 글자 클릭 a 링크 */
+.m2105 #TabsOpenArea .commsTabDiv .topTen>a {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -.82px;
+    text-align: center;
+    color: #0033aa;
+    display: inline-block;
+    line-height: 38px;
+    padding: 0 8px;
+}
+/* 글자 옆 물음표박스 와 아래 체크박스 */
+.m2105 #TabsOpenArea .commsTabDiv .topTen>a:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 38px;
+    background: url(https://#/assets/image/top/qa_top.png) 0 5px/24px auto no-repeat;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.m2105 #TabsOpenArea .commsTabDiv .topTen.on>a:after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 38px;
+    background: url(https://#/#/assets/image/top/bottomBtn12.png) 0 12px/12px auto no-repeat;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+/* 게시글 영역 */
+.TabsConts.on {
+    display: block;
+}
+.list-customer {
+    width: 1020px;
+    margin: 0 auto;
+}
+.m2105 #TabsOpenArea .tote .list-customer>ul {
+    counter-reset: list;
+}
+.list-customer ul {
+    overflow: hidden;
+    width: 100%;
+    border-top: 2px solid #888;
+}
+/*탑 3 - 글자색 변경*/
+.m2105 #TabsOpenArea .list-customer>ul>li {
+    position: relative;
+}
+.list-customer ul li {
+    padding: 0;
+    /*background: url(https://#/pc-static-root/image/comm/ico_arrow21x12_off.png) 98% 24px no-repeat;*/
+    border-bottom: 1px solid #e6e6e6;
+}
+.m2105 #TabsOpenArea .tote .list-customer>ul>li.topThree:before {
+    color: #f27370;
+}
+/* .m2105 #TabsOpenArea .tote .list-customer>ul>li:before {
+    position: absolute;
+    top: 21px;
+    left: 18px;
+    width: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #777;
+    content: "0" counter(list);
+    counter-increment: list;
+}*/
+/* 답변내용보고 닫는 a 태그*/
+.m2105 #TabsOpenArea .tote .list-customer>ul>li .tit {
+    background: 0 0;
+}
+/*.m2105 #TabsOpenArea .list-customer ul li .stit, .m2105 #TabsOpenArea .list-customer ul li .tit {
+    display: block;
+    margin-left: 0;
+    padding: 20px 0 20px 60px;
+    background: url(https://mqa.oliveyoung.co.kr/pc-static-root/image/comm/ico_faq14x15.png) 18px 23px no-repeat;
+    color: #222;
+    font-size: 14px;
+    line-height: 18px;
+    cursor: pointer;
+}*/
+/*top10 글자 강조 */
+.list-customer ul li .tit strong {
+    display: inline-block;
+    width: 140px;
+    margin-right: 11px;
+    vertical-align: middle;
+}
+/* 답변내용이 열렸을때 나오는 컨텐츠영역 */
+.list-customer ul li.open .conts {
+    display: block;
+}
+.list-customer ul li .conts {
+    display: none;
+    background: #fafafa;
+    border: 0;
+    color: #222;
+    font-size: 0;
+    line-height: 0;
+}
+.list-customer ul li .conts li.question {
+    padding: 28px 30px 25px 62px;
+}
+/*.list-customer ul li .conts li {
+    padding: 28px 30px 25px;
+    background: 0 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 0;
+}*/
+.list-customer ul li .conts li div, .list-customer ul li .conts li p {
+    padding: 0;
+    color: #222;
+    font-size: 14px;
+    line-height: 22px;
+}
+.pdzero {
+    padding: 0!important;
+}
+/*답변에 span태그글자 링크가 걸려있을 경우 */
+.a {
+    color: #666;
+    text-decoration: none;
+}
+/*답변 좋아요 */
+.faq_txt_good {
+    margin-top: 20px;
+    margin-bottom: -8px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+/* 좋아요 클릭 전후 활성화차이 있음 */
+.faq_txt_good .btn_faq_good {
+    margin-left: 8px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://#/assets/image/top/icon_good.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 32px auto;
+    background-color: transparent;
+    vertical-align: middle;
+}
+button {
+    text-align: center;
+    color: #fff;
+}
+button, input[type=submit] {
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+button, input[type=submit] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.faq_txt_good .btn_faq_good span {
+    position: absolute;
+    left: -999em;
+}
+
+/* 게시물 하단 페이징 */
+.pageing {
+    padding: 30px 0 0;
+    font-size: 0;
+    text-align: center;
+    line-height: 0;
+}
+.pageing a:active, .pageing a:focus, .pageing a:hover, .pageing strong, .pageing strong:active, .pageing strong:focus, .pageing strong:hover {
+    border: 1px solid #666;
+    color: #333;
+    font-weight: 700;
+}
+.pageing a, .pageing strong {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    border: 1px solid #e5e5e5;
+    color: #888;
+    font-size: 14px;
+    line-height: 28px;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+/* 페이지가 많을 경우 태그용 */
+.pageing a {
+    text-decoration: none;
+}
+
+/* container 최하단 전화번호 전체 */
+.phone-banner>div {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 110px;
+    border: 1px solid #e6e6e6;
+}
+/* container 최하단 전화번호 매장 */
+.phone-banner {
+    overflow: hidden;
+    margin: 60px 0 0;
+    background-color: #f9f9f9;
+}
+.m2105 #TabsOpenArea .phone-banner .deposits {
+    background: url(https://#/assets/image/top/icn-store.png) 90% 50%/48px auto no-repeat;
+}
+.phone-banner strong {
+    top: 30px;
+    left: 30px;
+    color: #9bce26;
+    font-size: 14px;
+    line-height: 18px;
+}
+.phone-banner em {
+    top: 25px;
+    left: 120px;
+    color: #222;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+}
+.phone-banner em, .phone-banner span, .phone-banner strong {
+    display: inline-block;
+    position: absolute;
+    vertical-align: top;
+}
+.phone-banner span {
+    top: 64px;
+    left: 123px;
+    color: #888;
+    font-size: 14px;
+    line-height: 18px;
+}
+/* container 최하단 전화번호온라인 */
+.m2105 #TabsOpenArea .phone-banner .online {
+    background: url(https://#/assets/image/top/icn-onlinemall.png) 90% 50%/48px auto no-repeat;
+}
+.phone-banner .online strong {
+    color: #f27370;
+}
